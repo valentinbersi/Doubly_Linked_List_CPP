@@ -39,7 +39,6 @@ private:
     const int FIRST_INDEX = 0;
     const size_t EMPTY = 0;
     const size_t ONE_ELEMENT = 1;
-    const size_t FIRST_ELEMENT = 0;
 
     // Pre: index must be less than size.
     // Post: returns a pointer to the node associated with the given index.
