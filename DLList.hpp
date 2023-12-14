@@ -285,7 +285,7 @@ void DLList<T>::add(T new_element, size_t index) {
         cursor_index++;
     } else if (index == size()) {
         new_node = new DLNode<T>(new_element, last_node, nullptr);
-        last_node->cambiar_siguiente(new_node);
+        last_node->set_next(new_node);
         last_node = new_node;
     } else {
         DLNode<T> *next_node = get_node(index);
