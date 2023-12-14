@@ -5,37 +5,38 @@ template<class T>
 class DLNode {
 private:
     T element{};
-    DLNode<T>* previous;
-    DLNode<T>* next;
+    DLNode<T> *previous;
+    DLNode<T> *next;
+
 public:
     // Constructor.
-    DLNode(T element);
+    explicit DLNode(T element);
 
     // Constructor.
-    DLNode(T element, DLNode<T>* previous, DLNode<T>* next);
+    DLNode(T element, DLNode<T> *previous, DLNode<T> *next);
 
     // Pre: -
     // Post: Returns a pointer to the previous node.
-    DLNode<T>* get_previous();
+    [[nodiscard("ignoring get_previos() return")]] DLNode<T> *get_previous();
 
     // Pre: -
     // Post: Returns a pointer to the next node.
-    Nodo_de<T>* get_next();
+    [[nodiscard("ignoring get_next() return")]] DLNode<T> *get_next();
 
     // Pre: -
     // Post: Sets the pointer to the previous node.
-    void set_previous(DLNode<T>* new_previous);
+    void set_previous(DLNode<T> *new_previous);
 
     // Pre: -
     // Post: Sets the pointer to the next node.
-    void set_next(DLNode<T>* new_next);
+    void set_next(DLNode<T> *new_next);
 
     // Pre: -
     // Post: Returns the stored element.
-    T get_element();
+    [[nodiscard("ignoring get_element() return")]] T get_element();
 
     // Destructor.
-    ~Nodo_de();
+    ~DLNode();
 };
 
 template<class T>
@@ -78,9 +79,9 @@ T DLNode<T>::get_element() {
 }
 
 template<class T>
-DLNode<T>::~Nodo_de() {
+DLNode<T>::~DLNode() {
     previous = nullptr;
     next = nullptr;
 }
 
-#endif //NODO_DE_HPP
+#endif //DLNODE_HPP
