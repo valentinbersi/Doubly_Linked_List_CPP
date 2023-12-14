@@ -17,11 +17,11 @@ public:
 
     // Pre: -
     // Post: Returns a pointer to the previous node.
-    [[nodiscard("ignoring get_previos() return")]] DLNode<T> *get_previous();
+    [[nodiscard]] DLNode<T> *get_previous();
 
     // Pre: -
     // Post: Returns a pointer to the next node.
-    [[nodiscard("ignoring get_next() return")]] DLNode<T> *get_next();
+    [[nodiscard]] DLNode<T> *get_next();
 
     // Pre: -
     // Post: Sets the pointer to the previous node.
@@ -33,7 +33,7 @@ public:
 
     // Pre: -
     // Post: Returns the stored element.
-    [[nodiscard("ignoring get_element() return")]] T get_element();
+    [[nodiscard]] T get_element();
 
     // Destructor.
     ~DLNode();
