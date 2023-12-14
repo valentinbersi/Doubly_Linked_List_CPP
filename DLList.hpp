@@ -102,13 +102,12 @@ public:
 
     // Pre: the cursor must be able to advance
     // Post: returns the element being pointed by the cursor and then moves the cursor in the desired direction.
-    // NOTE: next == true means that the cursor will be moved forwards, otherwise it will be moved backwards.
-    T advance(bool next);
+    T advance(bool direction);
 
     // Pre: -
     // Post: Resets the cursor to the beggining or the end. If the list is empty, the cursor is reseted to ist innitial
     // state (this means, cursor = nullptr and cursor_index = -1).
-    void reset_cursor(bool beginning);
+    void reset_cursor(bool position);
 
     // Pre: -
     // Post: Returns the number of elements in the list.
