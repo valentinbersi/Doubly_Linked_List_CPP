@@ -43,7 +43,7 @@ private:
 
     // Pre: index must be less than size.
     // Post: returns a pointer to the node associated with the given index.
-    [[nodiscard("ignoring get_node() return")]] DLNode<T> *get_node(size_t index);
+    [[nodiscard]] DLNode<T> *get_node(size_t index);
 
 public:
     // When calling advance, use this constant to specify the direction.
@@ -87,19 +87,19 @@ public:
 
     // Pre: the list can´t be empty.
     // Post: returns the first element of the list.
-    [[nodiscard("ignoring first() return")]] T first();
+    [[nodiscard]] T first();
 
     // Pre: the list can´t be empty.
     // Post: returns the last element of the list.
-    [[nodiscard("ignoring last() return")]] T last();
+    [[nodiscard]] T last();
 
     // Pre: index must be less than the size of the list.
     // Post: returns the element at the given position
-    [[nodiscard("ignoring element(unsigned long) return")]] T element(size_t index);
+    [[nodiscard]] T element(size_t index);
 
     // Pre: -
     // Post: returns true if it is possible advance (it means that the cursor isn´t nullptr).
-    [[nodiscard("ignoring can_advance() return")]] bool can_advance();
+    [[nodiscard]] bool can_advance();
 
     // Pre: the cursor must be able to advance
     // Post: returns the element being pointed by the cursor and then moves the cursor in the desired direction.
@@ -113,11 +113,11 @@ public:
 
     // Pre: -
     // Post: Returns the number of elements in the list.
-    [[nodiscard("ignoring size() return")]] size_t size();
+    [[nodiscard]] size_t size();
 
     // Pre: -
     // Post: Returns true if the list is empty.
-    [[nodiscard("ignoring empty() return")]] bool empty();
+    [[nodiscard]] bool empty();
 
     // Destructor.
     ~DLList();
